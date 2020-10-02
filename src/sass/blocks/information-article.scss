@@ -1,0 +1,347 @@
+.user-section__information-article {
+  flex-grow: 1;
+  padding: 0 1.5rem;
+  padding-left: 0;
+  padding-top: 120px;
+
+  background-color: transparent;
+}
+
+.information-article__navigation {
+  display: flex;
+  min-height: 45px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 0;
+
+  list-style: none;
+  background-color: transparent;
+}
+
+.information-article__navigation-item {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+
+  color: $color-link-dark;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: $color-link-dark;
+
+    transition: $default-transition-settings;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &--active::after {
+    width: 100%;
+  }
+}
+
+.information-article__user-info {
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  max-width: 700px;
+  min-height: 360px;
+  padding: 2rem;
+
+  background-image: url("https://oboitd.ru/images/goods/big/20200123095649_Sirenevoe_nebo_7-035.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 5px  $color-secondary;
+  border-radius: 15px;
+}
+
+.information-article__icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-right: 2rem;
+
+
+  font-size: 0;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px $color-secondary;
+  transition: $default-transition-settings;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $color-light;
+  }
+
+  &:hover .information-article__icon svg,
+  &:focus .information-article__icon svg {
+    fill: #039be5;
+  } 
+
+  &:active {
+    background-color: #cdd7f0;
+  }
+}
+
+.information-article__icon {
+  width: 50%;
+  height: 50%;
+  font-size: 0;
+}
+
+.information-article__icon > div,
+.information-article__icon svg {
+  width: 50px;
+  height: 50px;
+
+  fill: $color-link-dark;
+  transition: $default-transition-settings;
+}
+
+.information-article__form {
+  position: relative;
+  flex-grow: 1;
+
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.information-article__form-button {
+  position: absolute;
+  right: 50%;
+
+  display: block;
+  width: 200px;
+  padding: 0.5rem 1rem;
+
+  border: none;
+  border-radius: 10px;
+  background-color: $color-link;
+  color: #ffffff;
+  outline: none;
+
+  transform: translateX(50%);
+
+  &:disabled {
+    background-color: gainsboro;
+  }
+
+  &--edit {
+    top: -2.3rem;
+  }
+
+  &--save {
+    bottom: -2.3rem;
+  }
+}
+
+.information-article__list {
+  display: block;
+  width: 100%;
+
+  background-color: #ffffff;
+}
+
+.information-article__item {
+  display: flex;
+  align-items: center;
+  min-height: 45px;
+  margin: 5px 0;
+}
+
+.information-article__item > span {
+  max-width: 205px;
+
+  color: $color-black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  outline: none;
+}
+
+.information-article__info-description {
+  display: block;
+  width: 80px;
+  margin-right: 2.5rem;
+
+  font-weight: 700;
+  color: $color-black;
+}
+
+.information-article__info-description + input {
+  width: 100%;
+  max-width: 205px;
+  height: 30px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: $regular-font-size;
+  line-height: $regular-line-height;
+  font-weight: normal;
+  border: none;
+  border-bottom: 1px solid $color-link-dark;
+  outline: none;
+}
+
+.information-article__link {
+  position: relative;
+
+  display: block;
+  max-width: 255px;
+
+  color: $color-link;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  outline: none;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: $color-link-dark;
+    
+    transition: $default-transition-settings;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-link-dark;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 100%;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+/* ----------------- Разметкdа от 1024px до 1440px (small-desktop) ----------------- */
+
+@media (max-width: $viewport--xl) {
+  .information-article__icon-link {
+    display: none;
+  }
+
+  .information-article__user-info {
+    padding: 1rem;
+  }
+
+  .information-article__list {
+    max-width: inherit;
+    padding: 0 1rem;
+  }
+
+  .information-article__item {
+    flex-wrap: wrap;
+  }
+  
+  .information-article__info-description {
+    display: block;
+    width: 70px;
+    margin-right: 1.5rem;
+  }
+
+  .information-article__item > span,
+  .information-article__item > a  {
+    font-size: 14px;
+  }
+
+  .information-article__info-description {
+    font-size: 14px;
+  }
+
+  .information-article__info-description + input {
+    font-size: 14px;
+  }
+}
+
+/* ----------------- Разметкdа от 768px до 1024px (tablet) ----------------- */
+
+@media (max-width: $viewport--lg) {
+  .information-article {
+    padding: 0 0.5rem;
+  }
+
+  .information-article__navigation {
+    justify-content: center;
+  }
+
+  .information-article__navigation-item {
+    font-size: 14px;
+    margin-right: 0.7rem;
+  }
+
+  .information-article__user-info {
+    width: 100%;
+    min-width: 200px;
+    min-height: 150px;
+
+    overflow: hidden;
+  }
+
+  .information-article__form-button {
+    right: 1.5rem;
+  
+    width: auto;
+    padding: 0.5rem 1rem;
+  
+    transform: translateX(0);
+  
+    &--edit {
+      top: 1.5rem;
+    }
+  
+    &--save {
+      bottom: 1.5rem;
+    }
+  }
+
+  .information-article__list {
+    height: auto;
+    padding: 0 1rem;
+  }
+
+  .information-article__item {
+    flex-wrap: wrap;
+  }
+
+  .information-article__info-description + input {
+    height: 24px;
+  }
+
+  .information-article__info-description {
+    width: 100%;
+  }
+}
+

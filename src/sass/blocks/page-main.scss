@@ -1,0 +1,13 @@
+.page-main {
+  height: 100%;
+  background-color:#ffffff;
+}
+
+.page-main__container {
+  height: 100%;
+  display: flex;
+}
+
+.page-main__user-section {
+  flex-grow: 1;
+}

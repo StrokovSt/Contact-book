@@ -1,0 +1,41 @@
+/* ----------------- Разметкdа под desktop ----------------- */
+
+.container {
+  min-width: $viewport--sm;
+  max-width: $viewport--xxl;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ----------------- Разметкdа до 1920px (small-desktop) ----------------- */
+
+@media (max-width: $viewport--xxl) {
+  .container {
+    padding: 0;
+  }
+}
+
+/* ----------------- Разметкdа от 1024px до 1440px (small-desktop) ----------------- */
+
+@media (max-width: $viewport--xl) {
+  .container {
+    padding: 0;
+  }
+}
+
+/* ----------------- Разметкdа от 768px до 1024px (tablet) ----------------- */
+
+@media (max-width: $viewport--lg) {
+  .container {
+    padding: 0;
+  }
+}
+
+/* ----------------- Разметкdа от 320px до 768px (mobile) ----------------- */
+
+@media (max-width: $viewport--md) {
+  .container {
+    padding: 0;
+  }
+}

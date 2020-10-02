@@ -1,0 +1,111 @@
+.user-preview {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+
+  cursor: pointer;
+  transition: $default-transition-settings;
+
+  &:hover {
+    background-color: $color-light;
+  }
+
+  &--active {
+    background-color: #2196f3;
+    color: #ffffff;
+    cursor: auto;
+
+    &:hover {
+      background-color:#2196f3;
+    }
+  }
+
+  &--active .user-preview__name{
+    color: #ffffff;
+  }
+
+  &--active .user-preview__phone {
+    color: #ffffff;
+    pointer-events: auto;
+
+    &:hover::after {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.user-preview__avatar {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+
+  border-radius: 50%;
+}
+
+.user-preview__info-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 150px;
+  margin-right: auto;
+}
+
+.user-preview__name {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: $color-black;
+  font-size: $small-font-size;
+  white-space: nowrap;
+  text-shadow: 0 0 0.5px #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-preview__phone {
+  position: relative;
+
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+
+  color:#42a5f5;
+  font-size: $small-font-size;
+  text-shadow: 0 0 0.5px #000000;
+
+  pointer-events: none;
+  transition: $default-transition-settings;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    height: 1px;
+    width: 0;
+
+    background-color: $color-link;
+    transition: $default-transition-settings;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.user-preview__svg > div,
+.user-preview__svg svg {
+  width: 32px;
+  height: 32px;
+
+  cursor: pointer;
+}
+
+.user-preview__svg > div > svg {
+  fill: #ffca28;
+}

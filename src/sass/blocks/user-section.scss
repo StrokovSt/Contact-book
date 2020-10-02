@@ -1,0 +1,201 @@
+.user-section {
+  padding: 3rem 0;
+
+  background-color: #f5f5f5;
+  background-image: url("https://data.1freewallpapers.com/detail/mountains-clouds-moon-height-overview-landscape.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.user-section__container {
+  position: relative;
+  
+  width: 90%;
+  max-width: 1440px;
+  max-height: 100%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+
+  color: #ffffff;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 1px #000000;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+    min-height: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(73,125,189);
+    border-radius: 0.25rem;
+  }
+}
+
+.user-section__header {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.user-section__header-img {
+  position: relative;
+  bottom: 90%;
+
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.user-section__header-changer {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.user-section__main-container {
+  position: relative;
+  top: -95px;
+
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: auto;
+  margin-bottom: -95px;
+}
+
+/* ----------------- Разметкdа от 1024px до 1440px (small-desktop) ----------------- */
+
+@media (max-width: $viewport--xl) {
+  .user-section__main-container {
+    position: relative;
+    top: -65px;
+  
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: auto;
+    margin-bottom: -65px;
+  }
+}
+
+/* ----------------- Разметкdа от 768px до 1024px (tablet) ----------------- */
+
+@media (max-width: $viewport--lg) {
+  .user-section__main-container {
+    top: -65px;
+  
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -65px;
+  }
+
+  .user-section__header-img {
+    bottom: 5%;
+  }
+
+  .user-section__header-changer {
+    display: none;
+  }
+}
+
+/* ----------------- Разметкdа до 768px ----------------- */
+
+@media (max-width: $viewport--md) {
+  .user-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: block;
+    padding: 2rem 0;
+  }
+
+  .user-section__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 100%;
+    max-width: 1240px;
+    max-height: 100%;
+
+    overflow-y: scroll;
+  }
+
+  .user-section__header-img {
+    bottom: 0;
+  }
+  
+  .user-section__main-information {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+
+
+// .information-article__label {
+//   position: relative;
+
+//   display: block;
+//   height: auto;
+//   margin-right: 1rem;
+
+//   color: #ffffff;
+//   font-weight: 600;
+//   text-shadow: 0 0 8px #000;
+
+//   &::after {
+//     content: "";
+
+//     position: absolute;
+//     left: 130%;
+//     bottom: 0;
+
+//     display: block;
+//     width: 0;
+//     height: 1px;
+//     background-color: #ffffff;
+
+//     z-index: 1;
+//     transition: $default-transition-settings;
+//   }
+// }
+
+// .information-article__input {
+//   position: relative;
+
+//   width: 180px;
+//   height: 40px;
+//   margin-right: 1rem;
+
+//   font-size: $regular-font-size;
+//   color: #ffffff;
+//   text-shadow: 0 0 2px #000;
+
+//   border: none;
+//   background-color: transparent;
+//   outline: none;
+//   z-index: 1;
+
+//   &:hover {
+//     text-shadow: 0 0 2px #000;
+//   }
+
+//   &:hover + .information-article__label,
+//   &:focus + .information-article__label {
+//     &::after {
+//       width: 180px;
+//     }
+//   }
+// }

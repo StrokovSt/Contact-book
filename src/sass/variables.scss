@@ -1,0 +1,56 @@
+// Основные размеры экрана
+//---------------------------------
+
+$viewport--sm: 320px;
+$viewport--md: 767px;
+$viewport--lg: 1023px;
+$viewport--xl: 1439px;
+$viewport--xxl: 1919px;
+
+// Ретина
+//---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Основные цвета  
+//---------------------------------
+
+$color-main:#42427d;
+$color-main-soft:#5840bb;
+$color-secondary:#7979b2;
+$color-secondary-soft: #a0aac8;
+$color-link:#2196f3;
+$color-link-dark: #1565c0;
+$color-black:#203c42;
+$color-light:#f3f6ff;
+
+
+// Основные шрифты
+//---------------------------------
+
+$h2-size: 40px;
+$h2-mini-size: 32px;
+$h3-size: 28px;
+$h3-mini-size: 24px;
+$h4-size: 21px;
+$h4-mini-size: 18px;
+
+$small-font-size: 12px;
+$regular-font-size: 16px;
+$big-font-size: 18px;
+
+$small-line-height: 130%;
+$regular-line-height: 150%;
+$big-line-height: 171%;
+
+// Анимации
+//---------------------------------
+
+$default-transition-settings: 0.25s ease all;
+$modal-transition-settings: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+// Дополнительные параметры
+//---------------------------------
+
+$navigation-width: 20vw;
