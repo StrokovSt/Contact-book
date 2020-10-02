@@ -37,6 +37,50 @@
   }
 }
 
+.user-section__close-button {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+
+  display: none;
+  width: 40px;
+  height: 40px;
+  
+  font-size: 0;
+
+  border: 0;
+  opacity: 0.5;
+  background-color: transparent;
+  outline: none;
+  z-index: 1;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    height: 33px;
+    width: 2px;
+
+    background-color: #333;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
 .user-section__header {
   position: relative;
 
@@ -119,6 +163,8 @@
 
     display: block;
     padding: 2rem 0;
+
+    animation: showTheWindow 0.5s;
   }
 
   .user-section__container {
@@ -132,6 +178,10 @@
     overflow-y: scroll;
   }
 
+  .user-section__close-button {
+    display: block;
+  }
+
   .user-section__header-img {
     bottom: 0;
   }
@@ -142,60 +192,13 @@
   }
 }
 
+/* ----------------- Анимация ----------------- */
 
-
-// .information-article__label {
-//   position: relative;
-
-//   display: block;
-//   height: auto;
-//   margin-right: 1rem;
-
-//   color: #ffffff;
-//   font-weight: 600;
-//   text-shadow: 0 0 8px #000;
-
-//   &::after {
-//     content: "";
-
-//     position: absolute;
-//     left: 130%;
-//     bottom: 0;
-
-//     display: block;
-//     width: 0;
-//     height: 1px;
-//     background-color: #ffffff;
-
-//     z-index: 1;
-//     transition: $default-transition-settings;
-//   }
-// }
-
-// .information-article__input {
-//   position: relative;
-
-//   width: 180px;
-//   height: 40px;
-//   margin-right: 1rem;
-
-//   font-size: $regular-font-size;
-//   color: #ffffff;
-//   text-shadow: 0 0 2px #000;
-
-//   border: none;
-//   background-color: transparent;
-//   outline: none;
-//   z-index: 1;
-
-//   &:hover {
-//     text-shadow: 0 0 2px #000;
-//   }
-
-//   &:hover + .information-article__label,
-//   &:focus + .information-article__label {
-//     &::after {
-//       width: 180px;
-//     }
-//   }
-// }
+@keyframes showTheWindow {
+  0% {
+    transform: translateX(-100%)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}

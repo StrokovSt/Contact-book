@@ -41,6 +41,7 @@ export default function UserCardComponent({user, changeUsers, changeMobileStatus
 
   return (
     <div className="user-section__container">
+      <button className="user-section__close-button" onClick={CardCloseHandler}>Закрыть окно</button>
       <div className="user-section__header">
         <img className="user-section__header-img" src="https://data.1freewallpapers.com/detail/mountains-clouds-moon-height-overview-landscape.jpg" alt="Фоновый рисунок" />
       </div>
